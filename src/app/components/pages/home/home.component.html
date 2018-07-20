@@ -1,0 +1,19 @@
+
+<div class="container home-container">
+    <br>
+    <div class="bd-example">
+        <div class="row justify-content-md-center">
+            <div class="col-md-auto add-new-event-warpper">
+                <button *ngIf="auth.isLoggedIn()" type="button" routerLinkActive='active' class="btn btn-primary btn-lg add-new-event" routerLink="/events/create">
+                    <i class="fa fa-plus"></i>
+                </button>
+            </div>
+          
+          </div>
+    </div>
+    <br>
+   
+   <app-events></app-events>
+  
+  </div>
+  

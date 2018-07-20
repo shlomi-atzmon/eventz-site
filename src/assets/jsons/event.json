@@ -1,0 +1,17 @@
+{
+        "id":1,
+        "image":"https://media.istockphoto.com/photos/teenager-hipster-friends-partying-by-blowing-colorful-confetti-from-picture-id513550806",
+        "title":"טבריה 2018",
+        "subtitle":"כל החברה",
+        "alt_image":"תמונת קבוצה",
+        "from_date":"10-01-2018",
+        "to_date":"13-01-2018",
+        "description":"המסורת שלנו יוצאת לדרך",
+        "user_avatar":"https://material.angular.io/assets/img/examples/shiba1.jpg",
+        "friends":[
+            {"position":1,"name":"אייל פישר","email":"phisher@gmail.com","phone":"0501234567","status":0,"role":2},
+            {"position":2,"name":"תום קלמינסקי","email":"tom@gmail.com","phone":"0501234567","status":1,"role":1},
+            {"position":3,"name":"שלומי עצמון","email":"shlomi@gmail.com","phone":"0501234567","status":1,"role":1},
+            {"position":4,"name":"גונן שלג","email":"gonen@gmail.com","phone":"0501234567","status":1,"role":3}
+        ]
+    }

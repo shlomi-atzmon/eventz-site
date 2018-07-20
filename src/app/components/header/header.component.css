@@ -1,0 +1,66 @@
+ 
+ .header {
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    top: 0;
+    height: 80px;
+    display: block;
+    left: 0;
+    margin:20px 0 20px 0;
+    border-bottom: 1px solid #f8f9fa;
+    
+ }
+ 
+ .header__content {
+    position: relative;
+    padding: 0 20px;
+ }
+ 
+ .header-navbar{
+     height: 70px;
+ }
+ 
+.header-menu-wrapper{
+    height: 68px;
+}
+
+.header-menu-wrapper .main-menu-btn{
+    position: relative;
+    top: 15px;
+}
+
+.header-wrapper > button span{
+    font-size: 1em;
+}
+
+
+header div.user-img-wrapper img{
+
+    border-radius: 50%;
+    overflow: hidden;
+    width: 50px;
+}
+
+.user-name{
+    position: relative;
+    bottom: 0;
+    display: block;
+    width: 100px;
+    margin: 3px auto;
+    border-radius:10px;
+    height: 18px;
+
+}
+.header-title-wrapper{
+    height: 100%;
+
+}
+.header-title-wrapper .header-title{
+
+    position: relative;
+    line-height: 60px;
+    
+
+
+}

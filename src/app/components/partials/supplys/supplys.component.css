@@ -1,0 +1,17 @@
+.who-bring-cell{
+    display: block;
+   
+}
+.who-bring-cell > .who-bring-wrapper{
+
+    padding: 5px;
+}
+
+.supplyRow{
+
+    cursor: pointer;
+}
+
+.supplyRow:hover{
+    background-color: #ffffaa
+}

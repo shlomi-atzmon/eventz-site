@@ -1,0 +1,11 @@
+.friendRow{
+
+    cursor: pointer;
+}
+
+.friendRow:hover{
+    background-color: #ffffaa
+}
+div.mat-tab-body-wrapper{
+    max-width: 94%!important;
+}

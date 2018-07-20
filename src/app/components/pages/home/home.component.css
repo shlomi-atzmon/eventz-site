@@ -1,0 +1,16 @@
+.add-new-event{
+    border-radius: 50%;
+    display:block;
+    height: 4em;
+    width: 4em;
+    margin: 0 auto;
+  
+}
+
+.add-new-event-warpper{
+    margin: 0;
+}
+
+.home-container{
+    margin-top: 20px
+}

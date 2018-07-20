@@ -1,0 +1,43 @@
+
+.go-back{
+  border-radius: 50%;
+  display:block;
+  height: 4em;
+  width: 4em;
+
+}
+.event-form-section{
+  margin-top: 40px;
+  
+}
+mat-form-field, .event-form{
+    font-size: 16px;
+    text-align: right
+  }
+
+ .radio-warpper , .checkbox-warpper , .slide-margin {
+    padding-top: 20px;
+
+
+  }
+  #event-file-input
+{
+    display: none;
+}
+.event-input-full-width {
+  width: 100%;
+}
+.image-title{
+  margin-bottom: 10px;
+}
+
+.event-back-btn{
+  position: absolute;
+  top: 50px;
+  text-align: right;
+  cursor: pointer;
+}
+.event-tabs{
+
+  width: 100%
+}

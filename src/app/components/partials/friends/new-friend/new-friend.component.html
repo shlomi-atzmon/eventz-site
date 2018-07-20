@@ -1,0 +1,40 @@
+<form class="new-friend-form row" [formGroup]='formGroup' (ngSubmit)='addFriend()' #form="ngForm">
+    
+    <mat-form-field class="new-friend-full-width col-md-3 col-sm-12">
+        <input matInput placeholder="שם" formControlName="name">
+       
+        <mat-error *ngIf="name.hasError('required')">
+           שם זה שדה <strong>חובה</strong>
+        </mat-error>
+      </mat-form-field>
+
+  <mat-form-field class="new-friend-full-width col-md-3 col-sm-12">
+      <input matInput placeholder="אימייל" formControlName="email" >
+    
+      <mat-error *ngIf="email.hasError('email') && !email.hasError('required')">
+        הכנס אימייל אמיתי
+      </mat-error>
+      <mat-error *ngIf="email.hasError('required')">
+           אימייל זה שדה <strong>חובה</strong>
+      </mat-error>
+    </mat-form-field>
+
+    <mat-form-field class="new-friend-full-width col-md-3 col-sm-12">
+        <input matInput placeholder="סלולר" formControlName="phone" >
+        
+        <mat-error *ngIf="phone.hasError('required')">
+             סלולר זה שדה <strong>חובה</strong>
+        </mat-error>
+      </mat-form-field>
+
+      <button mat-button  class="add-new-friend-btn" >
+        <i class="fa fa-plus"></i>
+      </button>
+     
+  </form>
+
+  <div *ngIf="errorDuplicate" class="row">
+    <div class="col-md-12">
+      <mat-error >כבר קיים חבר עם אימייל {{errorDuplicate.email}}</mat-error>
+    </div>
+  </div>
