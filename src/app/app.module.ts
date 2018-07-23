@@ -71,6 +71,7 @@ import { MockBackend } from '@angular/http/testing';
 import { BaseRequestOptions, HttpModule } from '@angular/http';
 import { AuthGuard } from './services/auth-guard.service';
 import { EditUserComponent } from './components/pages/user/edit-user/edit-user.component';
+import { RoutingState } from './helpers/RoutingState';
 
 
 
@@ -204,6 +205,7 @@ const appRoutes:Routes = [
 
   ],
   providers: [
+    RoutingState,
     EventsService,
     EventsService,
     AuthService,

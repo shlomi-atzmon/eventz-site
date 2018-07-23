@@ -11,6 +11,8 @@ export class UserComponent implements OnInit {
   showFiller = true;
   public page:string='settings'
   ngOnInit() {
+
+    this.userSideNav.open()
   }
 
   @ViewChild('userSideNav') userSideNav: any;

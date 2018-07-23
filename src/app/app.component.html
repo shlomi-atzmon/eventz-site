@@ -2,8 +2,13 @@
   <app-header></app-header>
 <div class="container-fluid main-wrapper">
  
-  <div class="row back-btn-wrapper">
-      <div *ngIf="auth.isLoggedIn()" routerLinkActive='active' class="back-btn header-back-btn" routerLink="{{previousUrl}}">
+  <div class="back-btn-wrapper row">
+      <div 
+      *ngIf="auth.isLoggedIn()" 
+      routerLinkActive='active' 
+      class="back-btn header-back-btn pull-rigth" 
+      routerLink="{{RoutingState.getPreviousUrl()}}" 
+     >
           <i class="fa fa-chevron-right"></i>
       </div>
   </div>

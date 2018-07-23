@@ -3,7 +3,7 @@
         
         
     <div class="col-md-2 user-img-wrapper">
-        <div *ngIf="auth.isLoggedIn()" routerLink="/user/edit/{{auth.currentUser.id}}">
+        <div *ngIf="auth.isLoggedIn()" routerLink="/user/{{auth.currentUser.id}}">
             <img  [src]="auth.currentUser.img ? auth.currentUser.img : avatar" >
             <mat-chip *ngIf="auth.currentUser.name" class="user-name" color="primary" selected>{{auth.currentUser.name}}</mat-chip>
         </div>
@@ -12,8 +12,8 @@
    
 
 
-    <div class="col-md-8 header-title-wrapper" routerLink="/">
-        <h1 class="header-title">אירועים</h1>
+    <div class="col-md-8 header-title-wrapper" >
+        <h1 routerLink="/" class="header-title">אירועים</h1>
     </div> 
            
      
@@ -28,7 +28,7 @@
                 <mat-icon>expand_less</mat-icon>
             </button>
 
-            <button *ngIf="auth.isLoggedIn()" mat-menu-item routerLink="/settings">
+            <button *ngIf="auth.isLoggedIn()" mat-menu-item routerLink="/user/{{auth.currentUser.subs}}">
                 <mat-icon>person</mat-icon>
             </button>
 

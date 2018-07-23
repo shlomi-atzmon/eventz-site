@@ -5,7 +5,7 @@ export function fakeBackendFactory(
     backend: MockBackend, 
     options: BaseRequestOptions) {
         
-  let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkdvbmVuIFNoZWxlZyIsImFkbWluIjp0cnVlLCJub3RlcyI6MTB9.yjpDNnmZPvzAyYAYDqRzbXKx-1umIo6D7GLwSEM2oPw';
+  let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjEyMzQ1Njc4OTAiLCJuYW1lIjoiR29uZW4gU2hlbGVnIiwiYWRtaW4iOnRydWUsIm5vdGVzIjoxMCwiaW1nIjoiYXNzZXRzL2ltYWdlcy9nb25lbl91c2VyLmpwZyJ9.RO4mVMCkdbtkVGz1ZF2_YRDVpACoY_lG3FQfC5fb5vM';
     
 
 

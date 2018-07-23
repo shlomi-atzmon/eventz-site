@@ -7,24 +7,12 @@ import { AuthService } from '../../services/auth.service'
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
-export class HeaderComponent implements OnInit {
-  public previousUrl: string;
-  public currentUrl: string;
+export class HeaderComponent{
+
   public avatar:string="assets/images/avatar.jpeg";
   
-  constructor(public router: Router, public auth: AuthService) {
-  
-    router.events.subscribe(event => {
-      if (event instanceof NavigationEnd) {        
-        this.previousUrl = this.currentUrl;
-        this.currentUrl = event.url;
-      };
-    });
-  }
+  constructor( public auth: AuthService) {}
 
-  ngOnInit() {
-
-    
-  }
+ 
 
 }
