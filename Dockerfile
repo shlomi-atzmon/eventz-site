@@ -1,4 +1,4 @@
-FROM node
+FROM node:10.5
 
 
 COPY . /src/besababa/frontend
