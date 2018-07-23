@@ -10,8 +10,9 @@ import { AuthService } from '../../services/auth.service'
 export class HeaderComponent implements OnInit {
   public previousUrl: string;
   public currentUrl: string;
+  public avatar:string="assets/images/avatar.jpeg";
   
-  constructor(public router: Router, private auth: AuthService) {
+  constructor(public router: Router, public auth: AuthService) {
   
     router.events.subscribe(event => {
       if (event instanceof NavigationEnd) {        

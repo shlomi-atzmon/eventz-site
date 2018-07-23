@@ -2,7 +2,7 @@
 <section class="event-section">
   <div class="row">
     <div class="col-md" *ngFor="let event of events">
-      <a [routerLink]="['/events',event.id]">
+      <a [routerLink]="['/event',event.id]">
           <event-card [event]='event'></event-card>
       </a>
         

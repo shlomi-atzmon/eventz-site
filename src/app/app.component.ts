@@ -11,5 +11,5 @@ import * as $ from "jquery"
 export class AppComponent {
   title = 'app';
 
-  constructor(private auth: AuthService){}
+  constructor(public auth: AuthService){}
 }

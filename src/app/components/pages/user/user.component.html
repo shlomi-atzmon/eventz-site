@@ -1,3 +1,40 @@
-<p>
-  user works!
-</p>
+<mat-drawer-container class="user-container" autosize dir="rtl">
+
+  <div class="user-sidenav-content">
+
+    <button type="button" mat-button (click)="userSideNav.toggle()">
+        <mat-icon >{{ sideNavIcon() }}</mat-icon>
+    </button>
+
+    <edit-user class="user-inside-container" [page]="page"></edit-user>
+    
+  </div>
+ 
+  
+  <mat-drawer #userSideNav class="user-sidenav row" mode="side">
+    
+    <mat-list class="user-sidenav-list">
+
+      <mat-list-item [class.selected]="isActive('settings')" (click)="togglePage('settings')" >  
+        הגדרות  
+      </mat-list-item>
+
+      <mat-list-item [class.selected]="isActive('security')" (click)="togglePage('security')">
+        אבטחה  
+      </mat-list-item >
+
+      <mat-list-item [class.selected]="isActive('permissions')" (click)="togglePage('permissions')">
+          הרשאות
+      </mat-list-item >
+
+      <mat-list-item [class.selected]="isActive('friends')" (click)="togglePage('friends')">
+        חברים
+      </mat-list-item >
+
+    </mat-list>
+
+  </mat-drawer>
+
+ 
+
+</mat-drawer-container>

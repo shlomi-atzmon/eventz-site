@@ -7,10 +7,35 @@ export function fakeBackendFactory(
         
   let token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkdvbmVuIFNoZWxlZyIsImFkbWluIjp0cnVlLCJub3RlcyI6MTB9.yjpDNnmZPvzAyYAYDqRzbXKx-1umIo6D7GLwSEM2oPw';
     
+
+
   backend.connections.subscribe((connection: MockConnection) => {
     // We are using the setTimeout() function to simulate an 
     // asynchronous call to the server that takes 1 second. 
     setTimeout(() => {
+
+
+      if (connection.request.url.endsWith('/api/register') &&
+        connection.request.method === RequestMethod.Post){
+
+          let body = JSON.parse(connection.request.getBody());
+
+          if (body.email && body.repassword === body.password) {
+            connection.mockRespond(new Response(
+              new ResponseOptions({
+                status: 200,
+                body: { token: token,id:1 }
+             })));
+          } else {
+            connection.mockRespond(new Response(
+              new ResponseOptions({ status: 200 })
+            ));
+          }
+
+        }
+
+
+
       //
       // Fake implementation of /api/authenticate
       //

@@ -1,0 +1,45 @@
+.user-container {
+    width: 100%;
+    height: 700px;
+    text-align: center;
+
+  }
+  
+  .user-sidenav-content {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .user-sidenav {
+    padding: 20px;
+    width: 200px;
+  }
+  .user-sidenav-content button{
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .user-sidenav-list .mat-list-item{
+
+    cursor: pointer;
+  }
+
+  .user-sidenav-list .mat-list-item:hover{
+      background-color: antiquewhite;
+  }
+
+  .selected{
+    background-color:antiquewhite;
+  }
+
+  .user-inside-container{
+      width: 100%;
+      margin: 10px;
+      padding: 30px;
+      position: absolute;
+      top: 0;
+      z-index: -100;
+  }

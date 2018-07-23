@@ -27,8 +27,8 @@ import { MatPaginatorModule, MatSortModule } from '@angular/material';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatBadgeModule } from '@angular/material/badge';
-
-
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatListModule } from '@angular/material/list';
 
 // partials
 import { NotFoundComponent } from './components/not-found/not-found.component';
@@ -70,6 +70,7 @@ import { fakeBackendProvider } from './helpers/fake-backend';
 import { MockBackend } from '@angular/http/testing';
 import { BaseRequestOptions, HttpModule } from '@angular/http';
 import { AuthGuard } from './services/auth-guard.service';
+import { EditUserComponent } from './components/pages/user/edit-user/edit-user.component';
 
 
 
@@ -79,24 +80,32 @@ import { AuthGuard } from './services/auth-guard.service';
 
 const appRoutes:Routes = [
 
-  {
-    path:'events/create',
-    component:EventFormComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path:'events/edit/:event_id',
-    component:EventFormComponent,
-    canActivate: [AuthGuard]
-  },
-  {
-    path:'events/:event_id',
-    component:EventComponent,
-    canActivate: [AuthGuard]
-  },
+ 
   {
     path:'events',
-    component:HomeComponent
+    component:HomeComponent,
+    
+  },
+
+  {
+    path:'event',
+    children:[
+      {
+        path:'create',
+        component:EventFormComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path:'edit/:event_id',
+        component:EventFormComponent,
+        canActivate: [AuthGuard]
+      },
+      {
+        path:':event_id',
+        component:EventComponent,
+        canActivate: [AuthGuard]
+      },
+    ]
   },
 
   {
@@ -107,14 +116,16 @@ const appRoutes:Routes = [
     path:'register',
     component:RegisterComponent
   },
-  {
-    path:'user/:id',
-    component:UserComponent,
-    canActivate: [AuthGuard],
-  },
+  
   {
     path:'users',
     component:UsersComponent,
+    canActivate: [AuthGuard],
+    
+  },
+  {
+    path:'user/:id',
+    component:UserComponent,
     canActivate: [AuthGuard],
   },
   {
@@ -153,12 +164,15 @@ const appRoutes:Routes = [
     FriendRolesComponent,
     SupplysComponent,
     NewSuppliyComponent,
-    EditSupplyComponent
+    EditSupplyComponent,
+    EditUserComponent,
     
   ],
   entryComponents: [EditFriendComponent,EditSupplyComponent],
 
   imports: [
+    MatListModule,
+    MatSidenavModule,
     MatBadgeModule,
     MatMenuModule,
     MatDialogModule,

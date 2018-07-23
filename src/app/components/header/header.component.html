@@ -3,10 +3,9 @@
         
         
     <div class="col-md-2 user-img-wrapper">
-        <div *ngIf="auth.isLoggedIn()">
-            <img *ngIf="auth.currentUser.img" [src]="auth.currentUser.img" >
-            <img *ngIf="!auth.currentUser.img" src="assets/images/gonen_user.jpg" >
-            <mat-chip class="user-name" color="primary" selected>{{auth.currentUser.name}}</mat-chip>
+        <div *ngIf="auth.isLoggedIn()" routerLink="/user/edit/{{auth.currentUser.id}}">
+            <img  [src]="auth.currentUser.img ? auth.currentUser.img : avatar" >
+            <mat-chip *ngIf="auth.currentUser.name" class="user-name" color="primary" selected>{{auth.currentUser.name}}</mat-chip>
         </div>
       
     </div>
@@ -35,7 +34,7 @@
 
         
             <button mat-menu-item *ngIf="auth.isLoggedIn()" routerLink="/notifications" >
-                <mat-icon matBadge="auth.currentUser.note" matBadgeColor="warn">alarm</mat-icon>
+                <mat-icon matBadge="{{auth.currentUser.notes}}" matBadgeColor="warn">alarm</mat-icon>
             </button>
 
 

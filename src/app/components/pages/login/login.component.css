@@ -35,3 +35,9 @@
     border-top-right-radius: 0;
     direction: ltr;
   }
+
+  .register-link-wrapper{
+    font-size: 12px;
+    text-align: center;
+    margin-top: 5px;
+  }

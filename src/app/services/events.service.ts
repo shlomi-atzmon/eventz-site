@@ -23,12 +23,16 @@ export interface EventFriend{
     phone: string;
     status:number;
     admin: boolean;
+    disabled:boolean;
+    color:string;
   
 }
 
 export interface Event {
   id:any;
   public: boolean;
+  disabled:boolean;
+  color:string;
   image: string;
   end_date:string;
   start_date:string;
@@ -206,7 +210,7 @@ export class EventsService {
   }
 
 
-  
+}
 
  
   

@@ -1,4 +1,4 @@
-import { JwtHelper } from 'angular2-jwt';
+import { JwtHelperService } from '@auth0/angular-jwt';
 import { Injectable } from '@angular/core';
 import { Http } from '@angular/http';
 import { map } from 'rxjs/operators';
@@ -27,6 +27,24 @@ export class AuthService {
      
   }
 
+ 
+  register(credentials){
+
+    return this.http.post('/api/register', JSON.stringify(credentials))
+      .pipe(
+        map( response => {
+
+          let result = response.json();
+
+          if(result && result.token){
+            localStorage.setItem('token',result.token)
+            return result.id;
+          }
+          return false;
+
+        }));
+  }
+
   logout() { 
  
     localStorage.removeItem('token');
@@ -35,7 +53,7 @@ export class AuthService {
 
   isLoggedIn() { 
 
-     let jwtHelper = new JwtHelper();
+     let jwtHelper = new JwtHelperService();
 
      let token = localStorage.getItem('token');
 
@@ -53,8 +71,7 @@ export class AuthService {
 
     if(!token) return null;
 
-    console.log(new JwtHelper().decodeToken( token ))
-    return new JwtHelper().decodeToken( token );
+    return new JwtHelperService().decodeToken( token );
   }
 
   

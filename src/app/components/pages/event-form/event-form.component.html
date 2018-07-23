@@ -16,9 +16,9 @@
       
                 <mat-slide-toggle
                   class="slide-margin"
-                  [color]="color"
+                  [color]="event.color"
                   [checked]="event.public"
-                  [disabled]="disabled">
+                  [disabled]="event.disabled">
                     אירוע פומבי
                 </mat-slide-toggle>
       
@@ -36,7 +36,7 @@
                 <mat-form-field class="event-input-full-width">
                     <input matInput [matDatepicker]="start_date" placeholder="תאריך תחילת האירוע" [(ngModel)]="event.start_date" name="start_date">
                     <mat-datepicker-toggle matSuffix [for]="start_date"></mat-datepicker-toggle>
-                    <mat-datepicker #start_date [startAt]="startDate"></mat-datepicker>
+                    <mat-datepicker #start_date [startAt]="event.start_date"></mat-datepicker>
                 </mat-form-field>
           
               </div>
