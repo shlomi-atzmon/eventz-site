@@ -58,7 +58,7 @@ export class FriendsComponent implements OnInit {
   editFriend(friend): void {
 
     const dialogRef = this.dialog.open(EditFriendComponent, {
-      width: '80%',
+      width: '90%',
       data: friend
     });
 

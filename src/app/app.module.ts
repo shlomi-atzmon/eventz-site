@@ -72,6 +72,8 @@ import { BaseRequestOptions, HttpModule } from '@angular/http';
 import { AuthGuard } from './services/auth-guard.service';
 import { EditUserComponent } from './components/pages/user/edit-user/edit-user.component';
 import { RoutingState } from './helpers/RoutingState';
+import { BackBtnComponent } from './components/partials/back-btn/back-btn.component';
+import { NewEventBtnComponent } from './components/partials/new-event-btn/new-event-btn.component';
 
 
 
@@ -84,7 +86,7 @@ const appRoutes:Routes = [
  
   {
     path:'events',
-    component:HomeComponent,
+    component:EventsComponent,
     
   },
 
@@ -167,6 +169,8 @@ const appRoutes:Routes = [
     NewSuppliyComponent,
     EditSupplyComponent,
     EditUserComponent,
+    BackBtnComponent,
+    NewEventBtnComponent,
     
   ],
   entryComponents: [EditFriendComponent,EditSupplyComponent],

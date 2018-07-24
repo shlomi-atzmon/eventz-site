@@ -1,14 +1,14 @@
  
  .header {
-    position: absolute;
-    text-align: center;
-    width: 100%;
+    position: relative;
+  
     top: 0;
     height: 80px;
-    display: block;
     left: 0;
-    margin:20px 0 20px 0;
+    margin:10px 0 10px 0;
     border-bottom: 1px solid #f8f9fa;
+    padding: 0 10px 0 10px;
+
     
  }
  
@@ -35,21 +35,24 @@
 }
 
 
-header div.user-img-wrapper img{
+img.user-avatar{
 
     border-radius: 50%;
     overflow: hidden;
-    width: 50px;
+    max-width: 50px;
+    margin: 0 auto;
+
 }
 
 .user-name{
+  
     position: relative;
-    bottom: 0;
-    display: block;
-    width: 100px;
-    margin: 3px auto;
-    border-radius:10px;
-    height: 18px;
+    border-radius: 20px;
+    padding: 5px;
+    top: 17px;
+    left: 5px;
+    font-size: 1em;
+    text-align: initial
 
 }
 .header-title{
@@ -64,8 +67,9 @@ header div.user-img-wrapper img{
 
     position: relative;
     line-height: 60px;
+    text-align: center;
   
-    
-
-
 }
+
+
+.user-img-wrapper{padding-top: 12px;}

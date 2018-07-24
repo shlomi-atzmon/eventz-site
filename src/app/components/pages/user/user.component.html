@@ -2,10 +2,11 @@
 
   <div class="user-sidenav-content">
 
-    <button type="button" mat-button (click)="userSideNav.toggle()">
-        <mat-icon >{{ sideNavIcon() }}</mat-icon>
-    </button>
-
+   
+      <button class="side-bar-toggle-btn"  mat-button (click)="userSideNav.toggle()">
+          <mat-icon >{{ sideNavIcon() }}</mat-icon>
+      </button>
+      
     <edit-user class="user-inside-container" [page]="page"></edit-user>
     
   </div>
