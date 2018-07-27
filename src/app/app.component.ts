@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { RoutingState } from './helpers/RoutingState';
-import { AuthService } from './services/auth.service';
+
 
 @Component({
   selector: 'app-root',
@@ -9,7 +9,7 @@ import { AuthService } from './services/auth.service';
 })
 export class AppComponent {
 
-  constructor(public RoutingState:RoutingState,public auth:AuthService){}
+  constructor(public RoutingState:RoutingState){}
   
 
 }
