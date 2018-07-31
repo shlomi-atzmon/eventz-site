@@ -1,0 +1,27 @@
+.event-back-btn{
+    position: absolute;
+    top: 50px;
+    text-align: right;
+    cursor: pointer;
+  }
+  .event-tabs,.event-input-full-width{
+  
+    width: 100%
+  }
+  .event-image-warpper ,.event-image-upload{
+    width: 100%;
+  }
+  .img-default-event{
+  
+    max-height: 350px;
+    width: auto;
+  }
+
+  .event-setting-form{
+    text-align: right;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+  }
+

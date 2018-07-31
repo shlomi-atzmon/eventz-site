@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RoutingState } from './helpers/RoutingState';
+import { RoutingState } from './core/helpers/RoutingState';
 
 
 @Component({

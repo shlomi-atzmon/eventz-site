@@ -27,6 +27,7 @@
  body {
    direction: rtl;
     margin: 0;
+    outline: none;
  
  }
 
@@ -930,3 +931,8 @@
  
  /*# sourceMappingURL=base.css.map */
 body { margin: 0; }
+
+
+.mra{
+  margin: 0 auto;
+}
